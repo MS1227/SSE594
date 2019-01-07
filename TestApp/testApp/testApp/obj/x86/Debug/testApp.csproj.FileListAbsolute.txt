@@ -1,0 +1,6 @@
+/Users/MattSchnider/Code/SSE594/TestApp/testApp/testApp/bin/Debug/testApp.exe
+/Users/MattSchnider/Code/SSE594/TestApp/testApp/testApp/bin/Debug/testApp.pdb
+/Users/MattSchnider/Code/SSE594/TestApp/testApp/testApp/obj/x86/Debug/testApp.csprojAssemblyReference.cache
+/Users/MattSchnider/Code/SSE594/TestApp/testApp/testApp/obj/x86/Debug/testApp.csproj.CoreCompileInputs.cache
+/Users/MattSchnider/Code/SSE594/TestApp/testApp/testApp/obj/x86/Debug/testApp.exe
+/Users/MattSchnider/Code/SSE594/TestApp/testApp/testApp/obj/x86/Debug/testApp.pdb
