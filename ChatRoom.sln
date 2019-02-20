@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatRoom", "ChatRoom\ChatRo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rooms", "ClassLibrary1\Rooms.csproj", "{D8D29BF6-88E6-4D8A-B19A-EBCAB8B78ADD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomsTest", "NUnitTestProject1\RoomsTest.csproj", "{9C32E8FA-B79E-4F33-A228-0DCA5C67576C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoomsTest", "NUnitTestProject1\RoomsTest.csproj", "{9C32E8FA-B79E-4F33-A228-0DCA5C67576C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

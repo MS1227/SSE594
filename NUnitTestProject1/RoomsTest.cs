@@ -1,25 +1,40 @@
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RoomsType;
+using ServerType;
 
 namespace RoomsTest
 {
     public class Tests
     {
+        private Server myRooms;
+
         [SetUp]
         public void Setup()
         {
-            Rooms myRooms = new Rooms();
+            myRooms = new Server();
         }
 
         [Test]
-        public void Test1()
+        public void ConstructorCalled()
         {
-            
+            Assert.IsInstanceOf<Server>(myRooms, "Not a Rooms object");
+        }
+
+        [Test]
+        public void UserCreated()
+        {
+            string name = "FosJak";
+            myRooms.createUser(name);
+
+            Assert.AreEqual(name, myRooms.getUser(name).getName());
+        }
+
+        [Test]
+        public void ChatRoomCreated()
+        {
+            string name = "FosJak's Chat Room";
+            myRooms.createChatRoom(name);
+
+            Assert.AreEqual(name, myRooms.getChatRoom(name).getName());
         }
     }
 }
