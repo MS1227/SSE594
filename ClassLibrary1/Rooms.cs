@@ -1,8 +1,13 @@
 ﻿using System;
 
-namespace Rooms
+namespace RoomsType
 {
     public class Rooms
     {
+        
+        public Rooms()
+        {
+
+        }
     }
 }
