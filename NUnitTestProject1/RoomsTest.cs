@@ -37,10 +37,24 @@ namespace RoomsTest
 
             myRooms.createChatRoom(chatRoomName);
             ChatRoom myChat = myRooms.getChatRoom(chatRoomName);
-            User myUser = new User(userName, myChat);
+            User myUser = new User(userName);
             myChat.addUser(myUser);
 
             Assert.AreEqual(myRooms.getChatRoom(chatRoomName).getUser(userName).getName(), userName);
+        }
+
+        [Test]
+        public void ChatRoomCreatedAndUserAddedFail()
+        {
+            string userName = "FosJak";
+            string chatRoomName = "FosJak's Chat Room";
+
+            myRooms.createChatRoom(chatRoomName);
+            ChatRoom myChat = myRooms.getChatRoom(chatRoomName);
+            User myUser = new User(userName);
+            myChat.addUser(myUser);
+
+            Assert.IsFalse(myChat.addUser(myUser));
         }
 
         [Test]
@@ -62,13 +76,44 @@ namespace RoomsTest
 
             myRooms.createChatRoom(chatRoomName);
             ChatRoom myChat = myRooms.getChatRoom(chatRoomName);
-            User myUser = new User(userName, myChat);
+            User myUser = new User(userName);
             myChat.addUser(myUser);
             myUser.addMessageToChat(message);
 
             List<Message> myMessages = myChat.getMessageList();
 
             Assert.AreEqual(expected, myMessages[myMessages.Count-1].toString());
+        }
+
+        [Test]
+        public void CreateAndRetrieveAMessage100Xs()
+        {
+            string userName1 = "FosJak";
+            string userName2 = "JakFos";
+            string chatRoomName = "FosJak's Chat Room";
+            string expected = userName1 + ": This is chat room message number 100";
+
+            myRooms.createChatRoom(chatRoomName);
+            ChatRoom myChat = myRooms.getChatRoom(chatRoomName);
+            User FosJak = new User(userName1);
+            User JakFos = new User(userName2);
+            myChat.addUser(FosJak);
+            myChat.addUser(JakFos);
+
+            string message;
+            for (int i = 1; i <= 100; i++)
+            {
+                message = "This is chat room message number " + i;
+
+                if(i%2==0)
+                    FosJak.addMessageToChat(message);
+                else
+                    JakFos.addMessageToChat(message);
+            }
+
+            List<Message> myMessages = myChat.getMessageList();
+
+            Assert.AreEqual(expected, myMessages[myMessages.Count - 1].toString());
         }
     }
 }

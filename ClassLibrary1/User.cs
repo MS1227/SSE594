@@ -9,9 +9,13 @@ namespace Server
         private string name;
         private ChatRoom myChat;
 
-        public User(string name, ChatRoom myChat)
+        public User(string name)
         {
             this.name = name;
+        }
+
+        public void addToChatRoom(ChatRoom myChat)
+        {
             this.myChat = myChat;
         }
 

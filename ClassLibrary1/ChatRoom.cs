@@ -22,11 +22,19 @@ namespace Server
             return name;
         }
 
-        public void addUser(User user)
+        public bool addUser(User user)
         {
             //myUsers.Add(new User((short)myUsers.Count, name));
-
-            users.Add(user.getName(), user);
+            if (!users.ContainsKey(user.getName()))
+            {
+                users.Add(user.getName(), user);
+                user.addToChatRoom(this);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public User getUser(string name)
