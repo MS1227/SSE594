@@ -10,7 +10,7 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "15.8.0",
           "NUnit3TestAdapter": "3.10.0",
-          "Rooms": "1.0.0",
+          "Server": "1.0.0",
           "NUnit": "3.10.1"
         },
         "runtime": {
@@ -1032,9 +1032,9 @@
           }
         }
       },
-      "Rooms/1.0.0": {
+      "Server/1.0.0": {
         "runtime": {
-          "Rooms.dll": {}
+          "Server.dll": {}
         }
       }
     }
@@ -1542,7 +1542,7 @@
       "path": "system.xml.xpath.xmldocument/4.3.0",
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
     },
-    "Rooms/1.0.0": {
+    "Server/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

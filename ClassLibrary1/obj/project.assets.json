@@ -694,9 +694,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jake4\\Documents\\MSS\\SSE 554\\Project2\\SSE594\\ClassLibrary1\\C.csproj",
-      "projectName": "C",
-      "projectPath": "C:\\Users\\jake4\\Documents\\MSS\\SSE 554\\Project2\\SSE594\\ClassLibrary1\\C.csproj",
+      "projectUniqueName": "C:\\Users\\jake4\\Documents\\MSS\\SSE 554\\Project2\\SSE594\\ClassLibrary1\\Server.csproj",
+      "projectName": "Server",
+      "projectPath": "C:\\Users\\jake4\\Documents\\MSS\\SSE 554\\Project2\\SSE594\\ClassLibrary1\\Server.csproj",
       "packagesPath": "C:\\Users\\jake4\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\jake4\\Documents\\MSS\\SSE 554\\Project2\\SSE594\\ClassLibrary1\\obj\\",
       "projectStyle": "PackageReference",

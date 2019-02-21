@@ -1,31 +1,23 @@
 using NUnit.Framework;
-using ServerType;
+using Server;
+using System.Collections.Generic;
 
 namespace RoomsTest
 {
     public class Tests
     {
-        private Server myRooms;
+        private Server.Server myRooms;
 
         [SetUp]
         public void Setup()
         {
-            myRooms = new Server();
+            myRooms = new Server.Server();
         }
 
         [Test]
         public void ConstructorCalled()
         {
-            Assert.IsInstanceOf<Server>(myRooms, "Not a Rooms object");
-        }
-
-        [Test]
-        public void UserCreated()
-        {
-            string name = "FosJak";
-            myRooms.createUser(name);
-
-            Assert.AreEqual(name, myRooms.getUser(name).getName());
+            Assert.IsInstanceOf<Server.Server>(myRooms, "Not a Rooms object");
         }
 
         [Test]
@@ -35,6 +27,48 @@ namespace RoomsTest
             myRooms.createChatRoom(name);
 
             Assert.AreEqual(name, myRooms.getChatRoom(name).getName());
+        }
+
+        [Test]
+        public void ChatRoomCreatedAndUserAdded()
+        {
+            string userName = "FosJak";
+            string chatRoomName = "FosJak's Chat Room";
+
+            myRooms.createChatRoom(chatRoomName);
+            ChatRoom myChat = myRooms.getChatRoom(chatRoomName);
+            User myUser = new User(userName, myChat);
+            myChat.addUser(myUser);
+
+            Assert.AreEqual(myRooms.getChatRoom(chatRoomName).getUser(userName).getName(), userName);
+        }
+
+        [Test]
+        public void ChatRoomCreatedFail()
+        {
+            string name = "FosJak's Chat Room";
+            myRooms.createChatRoom(name);
+
+            Assert.IsFalse(myRooms.createChatRoom(name));
+        }
+
+        [Test]
+        public void CreateAndRetrieveAMessage()
+        {
+            string userName = "FosJak";
+            string chatRoomName = "FosJak's Chat Room";
+            string message = "Hello World!";
+            string expected = userName + ": " + message;
+
+            myRooms.createChatRoom(chatRoomName);
+            ChatRoom myChat = myRooms.getChatRoom(chatRoomName);
+            User myUser = new User(userName, myChat);
+            myChat.addUser(myUser);
+            myUser.addMessageToChat(message);
+
+            List<Message> myMessages = myChat.getMessageList();
+
+            Assert.AreEqual(expected, myMessages[myMessages.Count-1].toString());
         }
     }
 }

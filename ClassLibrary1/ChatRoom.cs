@@ -2,22 +2,51 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ChatRooms
+namespace Server
 {
     public class ChatRoom
     {
         string name;
-        List<String> messages;
+        private Dictionary<string, User> users;
+        private List<Message> messages;
 
         public ChatRoom(string name)
         {
             this.name = name;
-            messages = new List<string>();
+            users = new Dictionary<string, User>();
+            messages = new List<Message>();
         }
 
         public string getName()
         {
             return name;
+        }
+
+        public void addUser(User user)
+        {
+            //myUsers.Add(new User((short)myUsers.Count, name));
+
+            users.Add(user.getName(), user);
+        }
+
+        public User getUser(string name)
+        {
+            return users[name];
+        }
+
+        public int getNumUsers()
+        {
+            return users.Count;
+        }
+
+        public void addMessage(User user, string message)
+        {
+            messages.Add(new Message(user.getName(), message));
+        }
+
+        public List<Message> getMessageList()
+        {
+            return messages;
         }
     }
 }
