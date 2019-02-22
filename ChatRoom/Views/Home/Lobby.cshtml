@@ -1,8 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Chat Lobby";
+    List<string> currUsers = ViewData["Users"] as List<string>;
 }
 <h2>@ViewData["Title"]</h2>
 <h3>Users</h3>
+@if (currUsers != null)
+{
+    foreach (string var in currUsers)
+    {
+        <p>@var</p>
+    }
+
+}
 
 
 

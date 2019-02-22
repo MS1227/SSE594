@@ -25,6 +25,7 @@ namespace ChatRoom.Controllers
             
             if (chatServer.addUser(name))
             {
+                ViewData["Users"] = chatServer.listCurrUsers();
                 return View("Lobby", chatServer);
             }
             else
@@ -36,7 +37,7 @@ namespace ChatRoom.Controllers
         }
         public IActionResult Lobby()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Users"] = chatServer.listCurrUsers();
 
             return View(chatServer);
         }
