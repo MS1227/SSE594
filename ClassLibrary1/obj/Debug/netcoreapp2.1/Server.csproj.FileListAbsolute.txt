@@ -7,3 +7,12 @@ C:\Users\jake4\Documents\MSS\SSE 554\Project2\SSE594\ClassLibrary1\obj\Debug\net
 C:\Users\jake4\Documents\MSS\SSE 554\Project2\SSE594\ClassLibrary1\obj\Debug\netcoreapp2.1\Server.AssemblyInfo.cs
 C:\Users\jake4\Documents\MSS\SSE 554\Project2\SSE594\ClassLibrary1\obj\Debug\netcoreapp2.1\Server.dll
 C:\Users\jake4\Documents\MSS\SSE 554\Project2\SSE594\ClassLibrary1\obj\Debug\netcoreapp2.1\Server.pdb
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\bin\Debug\netcoreapp2.1\Server.deps.json
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\bin\Debug\netcoreapp2.1\Server.dll
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\bin\Debug\netcoreapp2.1\Server.pdb
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\obj\Debug\netcoreapp2.1\Server.csprojAssemblyReference.cache
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\obj\Debug\netcoreapp2.1\Server.csproj.CoreCompileInputs.cache
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\obj\Debug\netcoreapp2.1\Server.AssemblyInfoInputs.cache
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\obj\Debug\netcoreapp2.1\Server.AssemblyInfo.cs
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\obj\Debug\netcoreapp2.1\Server.dll
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\obj\Debug\netcoreapp2.1\Server.pdb

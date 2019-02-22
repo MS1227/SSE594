@@ -2856,6 +2856,7 @@
       "path": "system.collections.immutable/1.2.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Collections.Immutable.dll",
@@ -4315,6 +4316,7 @@
       "path": "system.reflection.metadata/1.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.1/System.Reflection.Metadata.dll",
@@ -5797,13 +5799,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\Kim\\Desktop\\SSE594\\project2\\SSE594\\ClassLibrary1\\Rooms.csproj": {
-              "projectPath": "C:\\Users\\Kim\\Desktop\\SSE594\\project2\\SSE594\\ClassLibrary1\\Rooms.csproj"
-=======
-            "C:\\Users\\jake4\\Documents\\MSS\\SSE 554\\Project2\\SSE594\\ClassLibrary1\\Server.csproj": {
-              "projectPath": "C:\\Users\\jake4\\Documents\\MSS\\SSE 554\\Project2\\SSE594\\ClassLibrary1\\Server.csproj"
->>>>>>> rooms_object
+            "C:\\Users\\Kim\\Desktop\\SSE594\\project2\\SSE594\\ClassLibrary1\\Server.csproj": {
+              "projectPath": "C:\\Users\\Kim\\Desktop\\SSE594\\project2\\SSE594\\ClassLibrary1\\Server.csproj"
             }
           }
         }
@@ -5842,5 +5839,13 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Kim\\Desktop\\SSE594\\project2\\SSE594\\NUnitTestProject1\\obj\\RoomsTest.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

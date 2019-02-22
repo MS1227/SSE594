@@ -46,7 +46,6 @@ C:\Users\Kim\Desktop\SSE594\project2\SSE594\ChatRoom\obj\Debug\netcoreapp2.1\Cha
 C:\Users\Kim\Desktop\SSE594\project2\SSE594\ChatRoom\obj\Debug\netcoreapp2.1\ChatRoom.TagHelpers.input.cache
 C:\Users\Kim\Desktop\SSE594\project2\SSE594\ChatRoom\obj\Debug\netcoreapp2.1\ChatRoom.TagHelpers.output.cache
 C:\Users\Kim\Desktop\SSE594\project2\SSE594\ChatRoom\obj\Debug\netcoreapp2.1\ChatRoom.RazorCoreGenerate.cache
-C:\Users\Kim\Desktop\SSE594\project2\SSE594\ChatRoom\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
 C:\Users\Kim\Desktop\SSE594\project2\SSE594\ChatRoom\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
 C:\Users\Kim\Desktop\SSE594\project2\SSE594\ChatRoom\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\Kim\Desktop\SSE594\project2\SSE594\ChatRoom\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
@@ -63,3 +62,6 @@ C:\Users\Kim\Desktop\SSE594\project2\SSE594\ChatRoom\obj\Debug\netcoreapp2.1\Cha
 C:\Users\Kim\Desktop\SSE594\project2\SSE594\ChatRoom\obj\Debug\netcoreapp2.1\ChatRoom.pdb
 C:\Users\Kim\Desktop\SSE594\project2\SSE594\ChatRoom\obj\Debug\netcoreapp2.1\ChatRoom.csproj.CopyComplete
 C:\Users\Kim\Desktop\SSE594\project2\SSE594\ChatRoom\obj\Debug\netcoreapp2.1\Razor\Views\User\Index.g.cshtml.cs
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ChatRoom\bin\Debug\netcoreapp2.1\Server.dll
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ChatRoom\bin\Debug\netcoreapp2.1\Server.pdb
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ChatRoom\obj\Debug\netcoreapp2.1\Razor\Views\Home\Lobby.g.cshtml.cs

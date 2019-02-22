@@ -4615,6 +4615,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Server/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Server.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Server.dll": {}
+        }
       }
     }
   },
@@ -12521,6 +12531,11 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Server/1.0.0": {
+      "type": "project",
+      "path": "../ClassLibrary1/Server.csproj",
+      "msbuildProject": "../ClassLibrary1/Server.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12528,7 +12543,8 @@
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1",
+      "Server >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12560,7 +12576,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Kim\\Desktop\\SSE594\\project2\\SSE594\\ClassLibrary1\\Server.csproj": {
+              "projectPath": "C:\\Users\\Kim\\Desktop\\SSE594\\project2\\SSE594\\ClassLibrary1\\Server.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

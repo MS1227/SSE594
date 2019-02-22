@@ -10,16 +10,24 @@ namespace ChatRoom.Controllers
 {
     public class HomeController : Controller
     {
+        static Server.Server chatServer;
         public IActionResult Index()
         {
-            return View();
+            if(chatServer == null)
+            {
+                chatServer = new Server.Server();
+            }
+            return View(chatServer);
         }
-
-        public IActionResult About()
+        public void createUser(string name)
+        {
+            Server.User user = new Server.User(name);
+        }
+        public IActionResult Lobby()
         {
             ViewData["Message"] = "Your application description page.";
 
-            return View();
+            return View(chatServer);
         }
 
         public IActionResult Contact()
