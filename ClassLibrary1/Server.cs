@@ -111,9 +111,18 @@ namespace Server
         public List<string> listCurrUsers()
         {
             List<string> ret = new List<string>();
-            foreach (KeyValuePair<string,User> x in m_Users)
+            foreach (KeyValuePair<string, User> x in m_Users)
             {
                 ret.Add(x.Key);
+            }
+            return ret;
+        }
+        public List<ChatRoom> listCurrRooms()
+        {
+            List<ChatRoom> ret = new List<ChatRoom>();
+            foreach (KeyValuePair<string, ChatRoom> x in m_ChatRooms)
+            {
+                ret.Add(x.Value);
             }
             return ret;
         }
