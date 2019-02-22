@@ -6,27 +6,27 @@ namespace RoomsTest
 {
     public class Tests
     {
-        private Server.Server myRooms;
+        private Server.Server myServer;
 
         [SetUp]
         public void Setup()
         {
-            myRooms = new Server.Server();
+            myServer = new Server.Server();
         }
 
         [Test]
         public void ConstructorCalled()
         {
-            Assert.IsInstanceOf<Server.Server>(myRooms, "Not a Rooms object");
+            Assert.IsInstanceOf<Server.Server>(myServer, "Not a Rooms object");
         }
 
         [Test]
         public void ChatRoomCreated()
         {
             string name = "FosJak's Chat Room";
-            myRooms.createChatRoom(name);
+            myServer.createChatRoom(name);
 
-            Assert.AreEqual(name, myRooms.getChatRoom(name).getName());
+            Assert.AreEqual(name, myServer.getChatRoom(name).getName());
         }
 
         [Test]
@@ -35,12 +35,26 @@ namespace RoomsTest
             string userName = "FosJak";
             string chatRoomName = "FosJak's Chat Room";
 
-            myRooms.createChatRoom(chatRoomName);
-            ChatRoom myChat = myRooms.getChatRoom(chatRoomName);
+            myServer.createChatRoom(chatRoomName);
+            ChatRoom myChat = myServer.getChatRoom(chatRoomName);
             User myUser = new User(userName);
             myChat.addUser(myUser);
 
-            Assert.AreEqual(myRooms.getChatRoom(chatRoomName).getUser(userName).getName(), userName);
+            Assert.AreEqual(myServer.getChatRoom(chatRoomName).getUser(userName).getName(), userName);
+        }
+
+        [Test]
+        public void ChatRoomCreatedAndUserAddedThenDeleted()
+        {
+            string userName = "FosJak";
+            string chatRoomName = "FosJak's Chat Room";
+
+            myServer.createChatRoom(chatRoomName);
+            ChatRoom myChat = myServer.getChatRoom(chatRoomName);
+            User myUser = new User(userName);
+            myChat.addUser(myUser);
+
+            Assert.AreEqual(myServer.getChatRoom(chatRoomName).getUser(userName).getName(), userName);
         }
 
         [Test]
@@ -49,8 +63,8 @@ namespace RoomsTest
             string userName = "FosJak";
             string chatRoomName = "FosJak's Chat Room";
 
-            myRooms.createChatRoom(chatRoomName);
-            ChatRoom myChat = myRooms.getChatRoom(chatRoomName);
+            myServer.createChatRoom(chatRoomName);
+            ChatRoom myChat = myServer.getChatRoom(chatRoomName);
             User myUser = new User(userName);
             myChat.addUser(myUser);
 
@@ -61,9 +75,9 @@ namespace RoomsTest
         public void ChatRoomCreatedFail()
         {
             string name = "FosJak's Chat Room";
-            myRooms.createChatRoom(name);
+            myServer.createChatRoom(name);
 
-            Assert.IsFalse(myRooms.createChatRoom(name));
+            Assert.IsFalse(myServer.createChatRoom(name));
         }
 
         [Test]
@@ -74,15 +88,15 @@ namespace RoomsTest
             string message = "Hello World!";
             string expected = userName + ": " + message;
 
-            myRooms.createChatRoom(chatRoomName);
-            ChatRoom myChat = myRooms.getChatRoom(chatRoomName);
+            myServer.createChatRoom(chatRoomName);
+            ChatRoom myChat = myServer.getChatRoom(chatRoomName);
             User myUser = new User(userName);
             myChat.addUser(myUser);
             myUser.addMessageToChat(message);
 
             List<Message> myMessages = myChat.getMessageList();
 
-            Assert.AreEqual(expected, myMessages[myMessages.Count-1].toString());
+            Assert.AreEqual(expected, myMessages[myMessages.Count - 1].toString());
         }
 
         [Test]
@@ -93,8 +107,8 @@ namespace RoomsTest
             string chatRoomName = "FosJak's Chat Room";
             string expected = userName1 + ": This is chat room message number 100";
 
-            myRooms.createChatRoom(chatRoomName);
-            ChatRoom myChat = myRooms.getChatRoom(chatRoomName);
+            myServer.createChatRoom(chatRoomName);
+            ChatRoom myChat = myServer.getChatRoom(chatRoomName);
             User FosJak = new User(userName1);
             User JakFos = new User(userName2);
             myChat.addUser(FosJak);
@@ -105,7 +119,7 @@ namespace RoomsTest
             {
                 message = "This is chat room message number " + i;
 
-                if(i%2==0)
+                if (i % 2 == 0)
                     FosJak.addMessageToChat(message);
                 else
                     JakFos.addMessageToChat(message);
@@ -114,6 +128,43 @@ namespace RoomsTest
             List<Message> myMessages = myChat.getMessageList();
 
             Assert.AreEqual(expected, myMessages[myMessages.Count - 1].toString());
+        }
+
+        [Test]
+        public void CreateUsersThenDeleteUsers()
+        {
+            string userName1 = "FosJak";
+            string userName2 = "JakFos";
+            string chatRoomName = "FosJak's Chat Room";
+            string expected = userName1 + ": This is chat room message number 100";
+
+            if (!myServer.createChatRoom(chatRoomName))
+                Assert.Fail();
+            if(!myServer.addUser(userName1))
+                Assert.Fail();
+            if(!myServer.addUser(userName2))
+                Assert.Fail();
+
+            if (!myServer.connectUserToRoom(myServer.getUser(userName1), myServer.getChatRoom(chatRoomName)))
+                Assert.Fail();
+            if (!myServer.connectUserToRoom(myServer.getUser(userName2), myServer.getChatRoom(chatRoomName)))
+                Assert.Fail();
+
+            if(!myServer.removeUser(myServer.getUser(userName1)))
+                Assert.Fail();
+            if (!myServer.removeUser(myServer.getUser(userName2)))
+                Assert.Fail();
+
+            if (myServer.getNumUsers() != 0)
+                Assert.Fail();
+
+            if (!myServer.removeChatRoom(myServer.getChatRoom(chatRoomName)))
+                Assert.Fail();
+
+            if (myServer.getNumChats() != 0)
+                Assert.Fail();
+
+            Assert.Pass();
         }
     }
 }
