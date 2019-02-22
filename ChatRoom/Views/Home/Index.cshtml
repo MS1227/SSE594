@@ -2,8 +2,9 @@
     ViewData["Title"] = "Chat Room Login";
 }
 <h1>Login</h1>
-@using (Html.BeginForm("createUser", "Home"))
+@using (Html.BeginForm("createUser", "Home", FormMethod.Post))
 {
-    @Html.TextBoxFor(m => m.Name)
-    <input type="submit" value="Submit Data" id="btnSubmit" />
+    @Html.TextBox("name")
+    <input type="submit" value="Submit" id="btnSubmit" />
+    @Html.Raw(TempData["msg"])
 }

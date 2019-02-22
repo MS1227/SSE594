@@ -19,9 +19,20 @@ namespace ChatRoom.Controllers
             }
             return View(chatServer);
         }
-        public void createUser(string name)
+        [HttpPost]
+        public ActionResult createUser(string name)
         {
-            Server.User user = new Server.User(name);
+            
+            if (chatServer.addUser(name))
+            {
+                return View("Lobby", chatServer);
+            }
+            else
+            {
+                TempData["msg"] = "<script>alert('Username Taken, please choose another');</script>";
+                return View("Index");
+            }
+            
         }
         public IActionResult Lobby()
         {
