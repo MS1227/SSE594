@@ -108,5 +108,14 @@ namespace Server
         {
             return m_ChatRooms[name];
         }
+        public List<string> listCurrUsers()
+        {
+            List<string> ret = new List<string>();
+            foreach (KeyValuePair<string,User> x in m_Users)
+            {
+                ret.Add(x.Key);
+            }
+            return ret;
+        }
     }
 }
