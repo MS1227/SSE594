@@ -1,0 +1,9 @@
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\bin\Debug\netcoreapp2.1\Rooms.deps.json
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\bin\Debug\netcoreapp2.1\Rooms.dll
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\bin\Debug\netcoreapp2.1\Rooms.pdb
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\obj\Debug\netcoreapp2.1\Rooms.csprojAssemblyReference.cache
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\obj\Debug\netcoreapp2.1\Rooms.csproj.CoreCompileInputs.cache
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\obj\Debug\netcoreapp2.1\Rooms.AssemblyInfoInputs.cache
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\obj\Debug\netcoreapp2.1\Rooms.AssemblyInfo.cs
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\obj\Debug\netcoreapp2.1\Rooms.dll
+C:\Users\Kim\Desktop\SSE594\project2\SSE594\ClassLibrary1\obj\Debug\netcoreapp2.1\Rooms.pdb

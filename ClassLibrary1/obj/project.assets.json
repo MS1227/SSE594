@@ -520,7 +520,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "GmkKfoyerqmsHMn7OZj0AKpcBabD+GaafqphvX2Mw406IwiJRy1pKcKqdCfKJfYmkRyJ6+e+RaUylgdJoDa1jQ==",
+      "sha512": "aSTPL94NloSiQVL5Len8wbjFKOnoAX/vOh3s3DF6g3c7GUUMLCDvnBhmA72M2iN2AedyA8hpr7m89kzSAKUnJQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
@@ -688,23 +688,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jake4\\.nuget\\packages\\": {},
+    "C:\\Users\\Kim\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jake4\\Documents\\MSS\\SSE 554\\Project2\\SSE594\\ClassLibrary1\\Rooms.csproj",
+      "projectUniqueName": "C:\\Users\\Kim\\Desktop\\SSE594\\project2\\SSE594\\ClassLibrary1\\Rooms.csproj",
       "projectName": "Rooms",
-      "projectPath": "C:\\Users\\jake4\\Documents\\MSS\\SSE 554\\Project2\\SSE594\\ClassLibrary1\\Rooms.csproj",
-      "packagesPath": "C:\\Users\\jake4\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jake4\\Documents\\MSS\\SSE 554\\Project2\\SSE594\\ClassLibrary1\\obj\\",
+      "projectPath": "C:\\Users\\Kim\\Desktop\\SSE594\\project2\\SSE594\\ClassLibrary1\\Rooms.csproj",
+      "packagesPath": "C:\\Users\\Kim\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kim\\Desktop\\SSE594\\project2\\SSE594\\ClassLibrary1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\jake4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kim\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
