@@ -1,8 +1,13 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
+<<<<<<< HEAD
       "C:\\Users\\Kim\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Kim\\.nuget\\packages",
+=======
+      "C:\\Users\\jake4\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\jake4\\.nuget\\packages",
+>>>>>>> rooms_object
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }

@@ -1,5 +1,9 @@
 {
   "version": 1,
+<<<<<<< HEAD
   "dgSpecHash": "OySHmgrEDIPB8zVIKP84jkJniNbAFHjC7BSooxZGTVvintrqxchfRRbC5gtfEIi6bLD0pFus7iMqFI+J1jdEuQ==",
+=======
+  "dgSpecHash": "4kYV9XawypgDQpdAXmtzt/3fu/Vs7i9TsTv3hxNQPlfT184WCbK5uOYl4dXOJLP44+a9gSHLsRUaCWpwH/f5yw==",
+>>>>>>> rooms_object
   "success": true
 }

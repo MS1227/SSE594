@@ -1646,14 +1646,14 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "Rooms/1.0.0": {
+      "Server/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "compile": {
-          "bin/placeholder/Rooms.dll": {}
+          "bin/placeholder/Server.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Rooms.dll": {}
+          "bin/placeholder/Server.dll": {}
         }
       }
     }
@@ -5752,10 +5752,10 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
-    "Rooms/1.0.0": {
+    "Server/1.0.0": {
       "type": "project",
-      "path": "../ClassLibrary1/Rooms.csproj",
-      "msbuildProject": "../ClassLibrary1/Rooms.csproj"
+      "path": "../ClassLibrary1/Server.csproj",
+      "msbuildProject": "../ClassLibrary1/Server.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5763,7 +5763,7 @@
       "Microsoft.NET.Test.Sdk >= 15.8.0",
       "Microsoft.NETCore.App >= 2.1.0",
       "NUnit3TestAdapter >= 3.10.0",
-      "Rooms >= 1.0.0",
+      "Server >= 1.0.0",
       "nunit >= 3.10.1"
     ]
   },
@@ -5797,8 +5797,13 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\Kim\\Desktop\\SSE594\\project2\\SSE594\\ClassLibrary1\\Rooms.csproj": {
               "projectPath": "C:\\Users\\Kim\\Desktop\\SSE594\\project2\\SSE594\\ClassLibrary1\\Rooms.csproj"
+=======
+            "C:\\Users\\jake4\\Documents\\MSS\\SSE 554\\Project2\\SSE594\\ClassLibrary1\\Server.csproj": {
+              "projectPath": "C:\\Users\\jake4\\Documents\\MSS\\SSE 554\\Project2\\SSE594\\ClassLibrary1\\Server.csproj"
+>>>>>>> rooms_object
             }
           }
         }
