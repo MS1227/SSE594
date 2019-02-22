@@ -6,28 +6,28 @@ namespace Server
 {
     public class ChatRoom
     {
-        string name;
-        private Dictionary<string, User> users;
-        private List<Message> messages;
+        string m_Name;
+        private Dictionary<string, User> m_Users;
+        private List<Message> m_Messages;
 
         public ChatRoom(string name)
         {
-            this.name = name;
-            users = new Dictionary<string, User>();
-            messages = new List<Message>();
+            this.m_Name = name;
+            m_Users = new Dictionary<string, User>();
+            m_Messages = new List<Message>();
         }
 
         public string getName()
         {
-            return name;
+            return m_Name;
         }
 
         public bool addUser(User user)
         {
             //myUsers.Add(new User((short)myUsers.Count, name));
-            if (!users.ContainsKey(user.getName()))
+            if (!m_Users.ContainsKey(user.getName()))
             {
-                users.Add(user.getName(), user);
+                m_Users.Add(user.getName(), user);
                 user.addToChatRoom(this);
                 return true;
             }
@@ -37,24 +37,34 @@ namespace Server
             }
         }
 
+        public bool hasUser(string name)
+        {
+            return m_Users.ContainsKey(name);
+        }
+
         public User getUser(string name)
         {
-            return users[name];
+            return m_Users[name];
+        }
+
+        internal void removeUser(User user)
+        {
+            m_Users.Remove(user.getName());
         }
 
         public int getNumUsers()
         {
-            return users.Count;
+            return m_Users.Count;
         }
 
         public void addMessage(User user, string message)
         {
-            messages.Add(new Message(user.getName(), message));
+            m_Messages.Add(new Message(user.getName(), message));
         }
 
         public List<Message> getMessageList()
         {
-            return messages;
+            return m_Messages;
         }
     }
 }

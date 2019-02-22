@@ -6,18 +6,18 @@ namespace Server
 {
     public class Message
     {
-        string authorName;
-        string message;
+        string m_AuthorName;
+        string m_Message;
 
         public Message(string authorName, string message)
         {
-            this.authorName = authorName;
-            this.message = message;
+            this.m_AuthorName = authorName;
+            this.m_Message = message;
         }
 
         public string toString()
         {
-            return authorName + ": " + message;
+            return m_AuthorName + ": " + m_Message;
         }
     }
 }
