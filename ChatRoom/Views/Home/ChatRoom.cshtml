@@ -1,0 +1,31 @@
+﻿@{
+    List<Server.Message> messages = ViewData["Message"] as List<Server.Message>;
+    ViewData["Title"] = "Contact";
+
+
+}
+
+@if (messages != null)
+{
+    foreach (Server.Message x in messages)
+    {
+        <p>@x.toString()</p>
+    }
+}
+
+
+@using (Html.BeginForm("sendMessage", "Home", FormMethod.Post))
+{
+    @Html.TextBox("message")
+    <input type="submit" value="send" id="btnSubmit" />
+
+
+}
+@using (Html.BeginForm("exitRoom", "Home", FormMethod.Post))
+{
+   
+    <input type="submit" value="exit room" id="btnSubmit" />
+
+
+}
+
