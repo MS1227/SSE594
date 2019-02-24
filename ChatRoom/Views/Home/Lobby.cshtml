@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Chat Lobby";
+    List<string> currUsers = ViewData["Users"] as List<string>;
+    List<Server.ChatRoom> currRooms = ViewData["Rooms"] as List<Server.ChatRoom>;
+    Server.User currUser = ViewData["currUser"] as Server.User;
+}
+<h2>@ViewData["Title"]</h2>
+<h4>Logged in as: @currUser.getName() </h4>
+<h3>Users</h3>
+@if (currUsers != null)
+{
+    foreach (string var in currUsers)
+    {
+        <p>@var</p>
+    }
+
+}
+<h3>
+    Rooms
+</h3>
+@using (Html.BeginForm("createChatRoom", "Home", FormMethod.Post))
+{
+    @Html.TextBox("name")
+    <input type="submit" value="Create" id="btnSubmit" />
+    @Html.Raw(TempData["msg"])
+    
+}
+
+
+@if (currRooms != null)
+{
+    foreach (Server.ChatRoom var in currRooms)
+    {
+        <p> @Html.ActionLink(var.getName(), "joinRoom", "Home", new { name = var.getName()})</p>
+    }
+}
+else
+{
+    <p>No Rooms Available</p>
+}
+
+
+
